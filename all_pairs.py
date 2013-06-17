@@ -68,11 +68,22 @@ print "+---+---+-----+-----+-----+"
 print "| u | v | d_e | d_g |  t  |"
 print "+---+---+-----+-----+-----+"
 
+count_t = 0
+sum_t = 0
+max_t = -maxint-1
+
 for i in range(n):
     for j in range(i+1,n):
         de = get_dist(i,j)
         dg = dists[i][j]
         t = dg / de
+        sum_t += t
+        count_t += 1
+        if t > max_t:
+            max_t = t
         print "|%(u)3d|%(v)3d|%(de)5.2f|%(dg)5.2f|%(t)5.2f|" % {"u":i,"v":j,"de":de,"dg":dg,"t":t}
 
 print "+---+---+-----+-----+-----+"
+
+print "maximum t: {0}".format(max_t)
+print "average t: {0}".format(sum_t / count_t)
