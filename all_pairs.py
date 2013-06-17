@@ -66,9 +66,12 @@ for k in range(n):
 # print the distances
 print "| u | v | d_e | d_g |  t  |"
 print "+---+---+-----+-----+-----+"
+
 for i in range(n):
     for j in range(i+1,n):
         de = get_dist(i,j)
         dg = dists[i][j]
         t = dg / de
         print "|%(u)3d|%(v)3d|%(de)5.2f|%(dg)5.2f|%(t)5.2f|" % {"u":i,"v":j,"de":de,"dg":dg,"t":t}
+
+print "+---+---+-----+-----+-----+"
