@@ -27,7 +27,7 @@ for _ in range(n):
 edges = []
     
 for line in lines:
-    edges.append(tuple(map(int,lines.pop(0).split(' '))))
+    edges.append(tuple(map(int,line.split(' '))))
     
 dists = np.empty((n,n))
 
