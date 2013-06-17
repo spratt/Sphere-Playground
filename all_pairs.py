@@ -8,7 +8,7 @@ Given the output of rbox followed by a list of edges, compute
 all-pairs shortest paths on the edges.
 """
 import numpy as np
-from sys import stdin, maxint, exit
+from sys import stdin, maxint
 from math import sqrt
 
 lines = []
@@ -64,6 +64,7 @@ for k in range(n):
                 dists[i][j] = dists[i][k] + dists[k][j]
 
 # print the distances
+print "+---+---+-----+-----+-----+"
 print "| u | v | d_e | d_g |  t  |"
 print "+---+---+-----+-----+-----+"
 
