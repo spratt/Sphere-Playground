@@ -46,7 +46,8 @@ square = lambda x: x * x
 
 def get_dist(u,v):
     return sqrt(square(vertices[u][0] - vertices[v][0]) +
-                square(vertices[u][1] - vertices[v][1]))
+                square(vertices[u][1] - vertices[v][1]) +
+                square(vertices[u][2] - vertices[v][2]))
     
 # input edge distances
 for edge in edges:
