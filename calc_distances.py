@@ -3,8 +3,8 @@
 calc_distances.py
 By Simon Pratt
 
-This program calculates the distance from origin of points generated
-using rbox, part of the qhull package.
+Calculates the distance from origin of points generated using rbox,
+part of the qhull package.
 """
 from sys import stdin
 from math import sqrt, pow
